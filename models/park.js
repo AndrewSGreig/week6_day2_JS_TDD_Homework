@@ -45,7 +45,7 @@ Park.prototype.countSpecies = function(species){
   let speciesCount = 0;
   console.log(this.dinoList.length)
    for (let i = 0; i<this.dinoList.length; i++){
-     console.log(this.dinoList[i].Dinosaur);
+     console.log(this.dinoList[i].value);
      // if (this.dinoList[i].species ===species){
     //   speciesCount ++;
     // }
