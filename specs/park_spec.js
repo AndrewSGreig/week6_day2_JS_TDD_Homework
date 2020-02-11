@@ -77,7 +77,7 @@ describe('Park', function() {
 
   it('should be able to find all dinosaurs of a particular species', function(){
     park.addDino(dino5);
-    console.log(park.dinoList);
+    // console.log(park.dinoList);
     const actual = park.countSpecies('t-rex');
 
   });
