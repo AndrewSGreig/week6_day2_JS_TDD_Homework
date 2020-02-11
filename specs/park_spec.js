@@ -11,6 +11,7 @@ describe('Park', function() {
     dino2 = new Dinosaur('t-rex', 'carnivore', 50);
     dino3 = new Dinosaur('dino', 'herbivore', 60);
     dino4 = new Dinosaur('Brachiosaurus', 'herbivore', 20);
+    dino5 = new Dinosaur('t-rex', 'carnivore', 50)
     park = new Park('Jurassic Park', 10, [dino1, dino2 ]);
 
 
@@ -57,25 +58,29 @@ describe('Park', function() {
     park.addDino(dino3);
     park.addDino(dino4);
 
-    console.log(dinos.sort(dinos.guestsAttractedPerDay));
-    console.log(dino1.guestsAttractedPerDay)
-    console.log(dino2.guestsAttractedPerDay)
-    park.sortDinos(dinos);
+    // console.log(dinos.sort(dinos.guestsAttractedPerDay));
+    // dinos.sort(guestsAttractedPerDay);
+    // park.dinoList.sort()
+    // console.log(park.dinoList.sort());
+    // console.log(dinos);
+    // console.log(dino1.guestsAttractedPerDay)
+    // console.log(dino2.guestsAttractedPerDay)
+    // park.sortDinos(dinos);
     // for (dino of dinos){
     //   dino.guestsAttractedPerDay
     //
     // }
-
-
-
-
-
-
+    park.sortDinos();
 
   });
 
 
-  it('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function(){
+    park.addDino(dino5);
+    console.log(park.dinoList);
+    const actual = park.countSpecies('t-rex');
+
+  });
 
   it('should be able to calculate the total number of visitors per day');
 
