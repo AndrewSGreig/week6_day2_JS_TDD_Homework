@@ -43,16 +43,26 @@ Park.prototype.sortDinos = function(){
 
 Park.prototype.countSpecies = function(species){
   let speciesCount = 0;
-  console.log(this.dinoList.length)
+  // console.log(this.dinoList.length)
    for (let i = 0; i<this.dinoList.length; i++){
      // console.log(this.dinoList[i].species);
-     console.log(`this.dinoList[i].species: ${this.dinoList[i].species} Species searched for: ${species}` );
-     if (this.dinoList[i].species = species){
+     // console.log(`this.dinoList[i].species: ${this.dinoList[i].species} Species searched for: ${species}` );
+     if (this.dinoList[i].species == species){
      // if (this.dinoList[i].species ===species){
        speciesCount ++;
+       // console.log(speciesCount);
      }
    }
-  console.log(`species name searched for: ${species} Species count: ${speciesCount}`);
+  // console.log(`species name searched for: ${species} Species count: ${speciesCount}`);
+  return speciesCount;
+}
+
+Park.prototype.dailyVisitors = function(){
+  let visitorCount = 0;
+  for (let i = 0; i <this.dinoList.length; i++){
+    visitorCount += this.dinoList[i].guestsAttractedPerDay
+  }
+  return visitorCount
 }
 
 module.exports = Park;

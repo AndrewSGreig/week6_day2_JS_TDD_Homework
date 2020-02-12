@@ -79,10 +79,17 @@ describe('Park', function() {
     park.addDino(dino5);
     // console.log(park.dinoList);
     const actual = park.countSpecies('t-rex');
+    const expected = 2
+    assert.equal(actual, expected)
 
   });
 
-  it('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day', function(){
+    let actual = park.dailyVisitors();
+    let expected = 90;
+    assert.equal(actual, expected);
+
+  });
 
   it('should be able to calculate the total number of visitors per year');
 
